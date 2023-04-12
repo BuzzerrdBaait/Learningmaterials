@@ -94,46 +94,45 @@ Path finding
             if neighbour not in open_list:
                 open_list.append(neighbour)
 
-explain each line of code
 
-Line 1: This creates an empty list called open_list and an empty list called closed_list, which will be used to store the nodes in the graph.
+Line 1:  creates an empty list called open_list and an empty list called closed_list, which will be used to store the nodes in the graph.
 
-Line 2: This sets the g, h, and f values of start to 0. g is the cost of reaching a node from the start, h is the heuristic cost of reaching the goal from the node, and f is the total cost of reaching the goal from the node.
+Line 2:  sets the g, h, and f values of start to 0. g is the cost of reaching a node from the start, h is the heuristic cost of reaching the goal from the node, and f is the total cost of reaching the goal from the node.
 
-Line 3: This adds the start node to the open_list.
+Line 3:  adds the start node to the open_list.
 
-Line 4: This runs an infinite loop while the open_list is not empty.
+Line 4:  runs an infinite loop while the open_list is not empty.
 
-Line 5: This sets the current variable to the first node in the open_list and sets the current_index variable to 0. This is done so that we can reference the current node and its index in the open_list.
+Line 5:  sets the current variable to the first node in the open_list and sets the current_index variable to 0. This is done so that we can reference the current node and its index in the open_list.
 
 Line 6: This loop iterates through each node in the open_list and sets the current variable to the node with the lowest f value. It also sets the current_index variable to the index of the node with the lowest f value in the open_list.
 
-Line 7: This removes the current node from the open_list.
+Line 7:  removes the current node from the open_list.
 
-Line 8: This adds the current node to the closed_list.
+Line 8:  adds the current node to the closed_list.
 
-Line 9: This checks if the current node is the goal node. If it is, then it returns the path to the goal by calling the reconstruct_path() function.
+Line 9:  checks if the current node is the goal node. If it is, then it returns the path to the goal by calling the reconstruct_path() function.
 
 Line 10: This loop iterates through each neighbour of the current node.
 
 Line 11: This sets the tentative_g variable to the cost of reaching the neighbour node from the current node.
 
-Line 12: This checks if the neighbour node is in the closed_list and if the tentative_g cost is greater than or equal to the g cost of the neighbour node. If it is, then the loop continues to the next neighbour node.
+Line 12:  checks if the neighbour node is in the closed_list and if the tentative_g cost is greater than or equal to the g cost of the neighbour node. If it is, then the loop continues to the next neighbour node.
 
-Line 13: This checks if the neighbour node is in the open_list and if the tentative_g cost is greater than or equal to the g cost of the neighbour node. If it is, then the loop continues to the next neighbour node.
+Line 13:  checks if the neighbour node is in the open_list and if the tentative_g cost is greater than or equal to the g cost of the neighbour node. If it is, then the loop continues to the next neighbour node.
 
-Line 14: This sets the g cost of the neighbour node to the tentative_g cost.
+Line 14: sets the g cost of the neighbour node to the tentative_g cost.
 
-Line 15: This sets the h cost of the neighbour node to the heuristic cost of reaching the goal node from the neighbour node.
+Line 15:  sets the h cost of the neighbour node to the heuristic cost of reaching the goal node from the neighbour node.
 
-Line 16: This sets the f cost of the neighbour node to the g cost plus the h cost.
+Line 16: sets the f cost of the neighbour node to the g cost plus the h cost.
 
-Line 17: This checks if the neighbour node is in the open_list. If it isn't, then it adds it to the open_list.
+Line 17:  checks if the neighbour node is in the open_list. If it isn't, then it adds it to the open_list.
 
-Line 18: This ends the loop for each neighbour of the current node.
+Line 18:  ends the loop for each neighbour of the current node.
 
-Line 19: This ends the infinite loop when the open_list is empty.
+Line 19:  ends the infinite loop when the open_list is empty.
 
-Line 20: This ends the a_star_search() function.
+Line 20:  ends the a_star_search() function.
 
 
