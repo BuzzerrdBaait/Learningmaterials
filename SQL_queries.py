@@ -45,14 +45,7 @@ class SQLDatabase:
         except Error as e:
             print("Failed to query data: {}".format(e))
  
-    def update(self, query):
-        cursor = self.database.cursor()
-        try:
-            cursor.execute(query)
-            self.database.commit()
-            print("Data updated successfully!")
-        except Error as e:
-            print("Failed to update data: {}".format(e))
+
  
     def delete(self, query):
         cursor = self.database.cursor()
