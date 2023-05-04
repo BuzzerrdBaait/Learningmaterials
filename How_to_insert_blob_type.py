@@ -19,8 +19,8 @@ mydb = mysql.connector.connect(
 cursor = mydb.cursor()
 
 def store_img():
-     #file = open('C:/Users/calca/Downloads/icon.png','rb').read()
-     file=open("C:/Users/calca/Pictures/Perry/cooking/IMG_2495.MOV", 'rb').read()
+     #file = open('C:/FILE_PATH_GOES_HERE/icon.png','rb').read()
+
      file = base64.b64encode(file)
      args = (file,)
      query = 'INSERT INTO img.image_tests (img) VALUES(%s)'
